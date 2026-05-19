@@ -6,6 +6,7 @@ const navlist = document.getElementById("nav-list");
 // Estado global da aplicação
 let currentPage = "home";
 let currentLang = "pt";
+const API_URL = "https://gabrielapi.serveousercontent.com/api/mensagem";
 
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById("menu-toggle");
@@ -17,6 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.addEventListener("click", () => {
         navlist.classList.toggle("active");
     });
+
+    // Inicia o processador de fila offline (roda a cada 30 segundos)
+    setInterval(processQueue, 30000);
+    // Tenta processar imediatamente ao carregar a página
+    setTimeout(processQueue, 2000);
 });
 
 // Event delegation for the nav link clicks
@@ -63,20 +69,22 @@ document.addEventListener("submit", (event) => {
 
         const formData = new FormData(event.target);
         const data = Object.fromEntries(formData);
-        const Api = "https://gabrielapi.serveousercontent.com/api/mensagem";
-
+        
         const submitBtn = event.target.querySelector('button[type="submit"]');
         const originalText = i18n_strings[currentLang].send_btn;
         submitBtn.innerHTML = "<span class='spinner'></span> " + i18n_strings[currentLang].sending;
         submitBtn.disabled = true;
         submitBtn.classList.add("loading");
 
-        fetch(Api, {
+        fetch(API_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) throw new Error("Server error");
+            return response.json();
+        })
         .then(result => {
             submitBtn.textContent = i18n_strings[currentLang].sent;
             submitBtn.classList.remove("loading");
@@ -89,18 +97,67 @@ document.addEventListener("submit", (event) => {
             }, 3000);
         })
         .catch(error => {
-            console.error("Erro:", error);
-            submitBtn.textContent = i18n_strings[currentLang].error;
+            console.warn("API Offline ou Erro, salvando na fila...", error);
+            
+            // Salva na fila do LocalStorage
+            saveToQueue(data);
+
+            // Avisa o usuário que foi pra fila
+            submitBtn.textContent = i18n_strings[currentLang].offline_saved;
             submitBtn.classList.remove("loading");
-            submitBtn.classList.add("error");
+            // Usamos uma cor diferente (amarelo/laranja) para "Aviso/Fila"
+            submitBtn.style.backgroundColor = "#f57c00"; 
+            
+            event.target.reset();
+            
             setTimeout(() => {
                 submitBtn.textContent = originalText;
-                submitBtn.classList.remove("error");
+                submitBtn.style.backgroundColor = "";
                 submitBtn.disabled = false;
-            }, 3000);
+            }, 4000);
         });
     }
 });
+
+// --- SISTEMA DE FILA OFFLINE (OFFLINE QUEUE) ---
+
+function saveToQueue(data) {
+    let queue = JSON.parse(localStorage.getItem("contactQueue") || "[]");
+    queue.push(data);
+    localStorage.setItem("contactQueue", JSON.stringify(queue));
+}
+
+function processQueue() {
+    let queue = JSON.parse(localStorage.getItem("contactQueue") || "[]");
+    
+    if (queue.length === 0) return;
+
+    // Pega o item mais antigo da fila
+    const data = queue[0];
+    
+    fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (response.ok) {
+            // Se enviou com sucesso, remove da fila e atualiza o LocalStorage
+            queue.shift();
+            localStorage.setItem("contactQueue", JSON.stringify(queue));
+            console.log("Mensagem da fila enviada com sucesso!");
+            
+            // Se ainda tem itens, processa o próximo imediatamente
+            if (queue.length > 0) processQueue();
+        }
+    })
+    .catch(error => {
+        // Se falhou de novo, apenas ignoramos e tentamos na próxima execução do setInterval
+        console.log("Processador de fila: Servidor continua offline.");
+    });
+}
+
+// --- FUNÇÕES DE RENDERIZAÇÃO E INTERFACE ---
 
 function updateUIStrings() {
     document.querySelectorAll("[data-i18n]").forEach(element => {

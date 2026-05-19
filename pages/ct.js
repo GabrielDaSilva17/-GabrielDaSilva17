@@ -226,7 +226,9 @@ const i18n_strings = {
         sending: "Enviando...",
         sent: "Mensagem Enviada!",
         error: "Erro ao enviar",
-        send_btn: "Enviar Mensagem"
+        send_btn: "Enviar Mensagem",
+        offline_saved: "Servidor offline. Mensagem salva na fila!",
+        queue_processing: "Processando fila..."
     },
     en: {
         nav_home: "Home",
@@ -236,7 +238,9 @@ const i18n_strings = {
         sending: "Sending...",
         sent: "Message Sent!",
         error: "Error sending",
-        send_btn: "Send Message"
+        send_btn: "Send Message",
+        offline_saved: "Server offline. Message saved to queue!",
+        queue_processing: "Processing queue..."
     },
     de: {
         nav_home: "Startseite",
@@ -246,7 +250,9 @@ const i18n_strings = {
         sending: "Senden...",
         sent: "Nachricht gesendet!",
         error: "Fehler beim Senden",
-        send_btn: "Nachricht Senden"
+        send_btn: "Nachricht Senden",
+        offline_saved: "Server offline. Nachricht in Warteschlange gespeichert!",
+        queue_processing: "Warteschlange wird verarbeitet..."
     }
 };
 
