@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel da Silva | Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="clean-header">
+        <div class="logo"><a href="#home" data-page="home">G<span class="accent-text">.</span></a></div>
+
+        <nav>
+            <div class="borgemenu" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul id="nav-list">
+                <li><a href="#home" data-page="home" class="nav-link" data-i18n="nav_home">Home</a></li>
+                <li><a href="#about" data-page="about" class="nav-link" data-i18n="nav_about">Sobre</a></li>
+                <li><a href="#contact" data-page="contact" class="nav-link" data-i18n="nav_contact">Contato</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-btn active" data-lang="pt">PT</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="de">DE</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="root" class="container"></main>
+
+    <footer>
+        <p><span data-i18n="footer_text">&copy; 2026 Gabriel da Silva. Feito com</span> <span class="heart">❤</span></p>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
