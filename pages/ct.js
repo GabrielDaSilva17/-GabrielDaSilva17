@@ -44,6 +44,12 @@ const translations = {
                         <h3>🚲 Hobbies & Vida Pessoal</h3>
                         <p>No meu tempo livre, quando não estou programando novos projetos (como este portfólio), gosto de sair para passear com minha namorada, dar uma volta de <b>E-Roller (patinete elétrico)</b> ou andar de bicicleta pela natureza.</p>
                     </div>
+
+                    <div class="card architecture-card">
+                        <h3>⚙️ Curiosidade: Como funciona a API do Contato?</h3>
+                        <p>Para receber mensagens no formulário de contato, eu não uso serviços prontos de terceiros. Eu criei minha própria <b>API RESTful usando Python (Flask)</b>. Ela roda de forma permanente num servidor Linux configurado num <b>Tablet</b> na minha própria casa! 🚀</p>
+                        <p>A API recebe os dados, salva em um banco de dados local (<b>SQLite</b>), verifica se há spam usando <i>Rate Limiting</i>, e me dispara um e-mail automaticamente via SMTP. Além disso, se o meu servidor caseiro reiniciar ou perder a internet, este site possui uma <b>Fila Offline</b> inteligente que salva sua mensagem e envia de forma automática assim que o sistema voltar ao ar. Uma arquitetura completa de ponta a ponta criada 100% por mim!</p>
+                    </div>
                 </div>
             </div>
         `,
@@ -67,12 +73,6 @@ const translations = {
                         </div>
                         <button type="submit" class="primary-btn submit-btn">Enviar Mensagem</button>
                     </form>
-                </div>
-                
-                <div class="card architecture-card">
-                    <h3>⚙️ Curiosidade: Como isso funciona?</h3>
-                    <p>Para enviar esta mensagem, eu não uso serviços prontos de terceiros. Eu criei minha própria <b>API RESTful usando Python (Flask)</b>. Ela roda de forma permanente num servidor Linux configurado num <b>Tablet</b> na minha própria casa! 🚀</p>
-                    <p>A API recebe os dados, salva em um banco de dados local (<b>SQLite</b>), verifica se há spam usando <i>Rate Limiting</i>, e me dispara um e-mail automaticamente via SMTP. Além disso, se o meu servidor caseiro reiniciar ou perder a internet, este site possui uma <b>Fila Offline</b> inteligente que salva sua mensagem e envia de forma automática assim que o sistema voltar ao ar. Uma arquitetura completa de ponta a ponta criada 100% por mim!</p>
                 </div>
             </div>
         `
@@ -122,6 +122,12 @@ const translations = {
                         <h3>🚲 Hobbies & Personal Life</h3>
                         <p>In my free time, when I'm not coding new projects (like this portfolio), I like going out with my girlfriend, riding my <b>E-Roller (electric scooter)</b>, or cycling through nature.</p>
                     </div>
+
+                    <div class="card architecture-card">
+                        <h3>⚙️ Behind the Scenes: The Contact API</h3>
+                        <p>I don't use ready-made third-party services to handle the contact form. I built my own <b>RESTful API using Python (Flask)</b>. It runs 24/7 on a Linux server configured on a <b>Tablet</b> in my own home! 🚀</p>
+                        <p>The API receives the data, stores it in a local database (<b>SQLite</b>), prevents spam using <i>Rate Limiting</i>, and automatically sends me an email via SMTP. Furthermore, if my home server temporarily loses connection, this website features a smart <b>Offline Queue</b> that saves your message and automatically resends it once the system is back online. A complete end-to-end architecture built 100% by me!</p>
+                    </div>
                 </div>
             </div>
         `,
@@ -145,12 +151,6 @@ const translations = {
                         </div>
                         <button type="submit" class="primary-btn submit-btn">Send Message</button>
                     </form>
-                </div>
-
-                <div class="card architecture-card">
-                    <h3>⚙️ Behind the Scenes: How it works?</h3>
-                    <p>I don't use ready-made third-party services to handle this form. I built my own <b>RESTful API using Python (Flask)</b>. It runs 24/7 on a Linux server configured on a <b>Tablet</b> in my own home! 🚀</p>
-                    <p>The API receives the data, stores it in a local database (<b>SQLite</b>), prevents spam using <i>Rate Limiting</i>, and automatically sends me an email via SMTP. Furthermore, if my home server temporarily loses connection, this website features a smart <b>Offline Queue</b> that saves your message and automatically resends it once the system is back online. A complete end-to-end architecture built 100% by me!</p>
                 </div>
             </div>
         `
@@ -200,6 +200,12 @@ const translations = {
                         <h3>🚲 Hobbys & Privatleben</h3>
                         <p>In meiner Freizeit, wenn ich nicht gerade neue Projekte (wie dieses Portfolio) programmiere, gehe ich gerne mit meiner Freundin spazieren, fahre mit meinem <b>E-Roller</b> oder fahre mit dem Fahrrad durch die Natur.</p>
                     </div>
+
+                    <div class="card architecture-card">
+                        <h3>⚙️ Hinter den Kulissen: Die Kontakt-API</h3>
+                        <p>Ich verwende keine vorgefertigten Drittanbieter-Dienste für das Kontaktformular. Ich habe meine eigene <b>RESTful-API mit Python (Flask)</b> entwickelt. Sie läuft rund um die Uhr auf einem Linux-Server, der auf einem <b>Tablet</b> bei mir zu Hause konfiguriert ist! 🚀</p>
+                        <p>Die API empfängt die Daten, speichert sie in einer lokalen Datenbank (<b>SQLite</b>), verhindert Spam durch <i>Rate Limiting</i> und sendet mir dann automatisch eine E-Mail über SMTP. Sollte mein Heimserver außerdem vorübergehend die Verbindung verlieren, verfügt diese Website über eine intelligente <b>Offline-Warteschlange</b>, die Ihre Nachricht speichert und automatisch erneut sendet, sobald das System wieder online ist. Eine komplette, zu 100% von mir erstellte End-to-End-Architektur!</p>
+                    </div>
                 </div>
             </div>
         `,
@@ -223,12 +229,6 @@ const translations = {
                         </div>
                         <button type="submit" class="primary-btn submit-btn">Nachricht Senden</button>
                     </form>
-                </div>
-
-                <div class="card architecture-card">
-                    <h3>⚙️ Hinter den Kulissen: Wie funktioniert das?</h3>
-                    <p>Ich verwende keine vorgefertigten Drittanbieter-Dienste für dieses Formular. Ich habe meine eigene <b>RESTful-API mit Python (Flask)</b> entwickelt. Sie läuft rund um die Uhr auf einem Linux-Server, der auf einem <b>Tablet</b> bei mir zu Hause konfiguriert ist! 🚀</p>
-                    <p>Die API empfängt die Daten, speichert sie in einer lokalen Datenbank (<b>SQLite</b>), verhindert Spam durch <i>Rate Limiting</i> und sendet mir dann automatisch eine E-Mail über SMTP. Sollte mein Heimserver außerdem vorübergehend die Verbindung verlieren, verfügt diese Website über eine intelligente <b>Offline-Warteschlange</b>, die Ihre Nachricht speichert und automatisch erneut sendet, sobald das System wieder online ist. Eine komplette, zu 100% von mir erstellte End-to-End-Architektur!</p>
                 </div>
             </div>
         `
