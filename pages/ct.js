@@ -239,6 +239,7 @@ const i18n_strings = {
     pt: {
         nav_home: "Home",
         nav_about: "Sobre",
+        nav_blog: "Blog",
         nav_contact: "Contato",
         footer_text: "© 2026 Gabriel da Silva. Feito com",
         sending: "Enviando...",
@@ -251,6 +252,7 @@ const i18n_strings = {
     en: {
         nav_home: "Home",
         nav_about: "About",
+        nav_blog: "Blog",
         nav_contact: "Contact",
         footer_text: "© 2026 Gabriel da Silva. Made with",
         sending: "Sending...",
@@ -263,6 +265,7 @@ const i18n_strings = {
     de: {
         nav_home: "Startseite",
         nav_about: "Über Mich",
+        nav_blog: "Blog",
         nav_contact: "Kontakt",
         footer_text: "© 2026 Gabriel da Silva. Gemacht mit",
         sending: "Senden...",

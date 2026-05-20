@@ -175,6 +175,7 @@ function loadPage(page, animate = true) {
     const titles = {
         home: "Gabriel da Silva | " + i18n_strings[currentLang].nav_home,
         about: "Gabriel da Silva | " + i18n_strings[currentLang].nav_about,
+        blog: "Gabriel da Silva | " + i18n_strings[currentLang].nav_blog,
         contact: "Gabriel da Silva | " + i18n_strings[currentLang].nav_contact,
         error: "404 - Not Found"
     };
