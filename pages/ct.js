@@ -72,6 +72,23 @@ const translations = {
                         </div>
                         <a href="https://termux-blog-g.blogspot.com/2026/03/termux-ultra-edition-2026-o-setup.html" target="_blank" class="primary-btn" style="margin-top: 10px; display: inline-block;">Ler Artigo Completo</a>
                     </div>
+                    
+                    <div class="card blog-card">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMiMzFjq16-kV8FJGTdwEwgYkR8WkUU6aWPZUp4beP29LWQpfhAZL8QtMAEQFb7NKw43V7089bv2u23eScHNCL4wtNXYvEuTw7EQ_26lobVXX9v0R-rNb2X-TaZPWhaJJZYzYJkJNAPcmMp54WSoGnYiLOXPLMLDAWkJORMNwyxvXnKfiu9yWGG7bjllo/w320-h189-rw/Captura%20de%20tela%202026-05-20%20082602.png" alt="Nexus Downloader" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                        <h3>💚 Nexus Downloader: Interface para yt-dlp em C#</h3>
+                        <p style="margin-bottom: 10px; color: var(--text-secondary); font-size: 13px;">📅 Maio 2026 · 🏷️ Automação</p>
+                        <p>Baixe vídeos ou extraia áudios de qualquer site sem terminais complexos! Layout Escuro moderno, instalador automático do yt-dlp e barra de progresso em tempo real.</p>
+                        <div class="skills-tags" style="margin: 15px 0;">
+                            <span>C#</span>
+                            <span>Windows Forms</span>
+                            <span>yt-dlp</span>
+                            <span>Automação</span>
+                        </div>
+                        <div style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;">
+                            <a href="https://termux-blog-g.blogspot.com/2026/05/nexus-downloader.html" target="_blank" class="primary-btn" style="flex: 1; text-align: center; font-size: 13px;">📖 Ler no Blog</a>
+                            <a href="https://github.com/GabrielDaSilva17/Nuxus-Downloader" target="_blank" class="secondary-btn" style="flex: 1; text-align: center; font-size: 13px;">💻 Ver Código</a>
+                        </div>
+                    </div>
                 </div>
                 <div style="text-align: center; margin-top: 30px;">
                     <a href="https://termux-blog-g.blogspot.com/search/label/Linux" target="_blank" class="secondary-btn">🌐 Ver Todos os Artigos no Blogger</a>
@@ -175,6 +192,23 @@ const translations = {
                         </div>
                         <a href="https://termux-blog-g.blogspot.com/2026/03/termux-ultra-edition-2026-o-setup.html" target="_blank" class="primary-btn" style="margin-top: 10px; display: inline-block;">Read Full Article</a>
                     </div>
+
+                    <div class="card blog-card">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMiMzFjq16-kV8FJGTdwEwgYkR8WkUU6aWPZUp4beP29LWQpfhAZL8QtMAEQFb7NKw43V7089bv2u23eScHNCL4wtNXYvEuTw7EQ_26lobVXX9v0R-rNb2X-TaZPWhaJJZYzYJkJNAPcmMp54WSoGnYiLOXPLMLDAWkJORMNwyxvXnKfiu9yWGG7bjllo/w320-h189-rw/Captura%20de%20tela%202026-05-20%20082602.png" alt="Nexus Downloader" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                        <h3>💚 Nexus Downloader: C# GUI for yt-dlp</h3>
+                        <p style="margin-bottom: 10px; color: var(--text-secondary); font-size: 13px;">📅 May 2026 · 🏷️ Automation</p>
+                        <p>Download video or extract high-quality audio without command terminals! Modern Dark theme, automatic background yt-dlp downloader, and fluid UI process mapping.</p>
+                        <div class="skills-tags" style="margin: 15px 0;">
+                            <span>C#</span>
+                            <span>Windows Forms</span>
+                            <span>yt-dlp</span>
+                            <span>Automation</span>
+                        </div>
+                        <div style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;">
+                            <a href="https://termux-blog-g.blogspot.com/2026/05/nexus-downloader.html" target="_blank" class="primary-btn" style="flex: 1; text-align: center; font-size: 13px;">📖 Read on Blog</a>
+                            <a href="https://github.com/GabrielDaSilva17/Nuxus-Downloader" target="_blank" class="secondary-btn" style="flex: 1; text-align: center; font-size: 13px;">💻 View Code</a>
+                        </div>
+                    </div>
                 </div>
                 <div style="text-align: center; margin-top: 30px;">
                     <a href="https://termux-blog-g.blogspot.com/search/label/Linux" target="_blank" class="secondary-btn">🌐 View All Articles on Blogger</a>
@@ -248,13 +282,13 @@ const translations = {
 
                     <div class="card">
                         <h3>🚲 Hobbys & Privatleben</h3>
-                        <p>In meiner Freizeit, wenn ich nicht gerade neue Projekte (wie dieses Portfolio) programmiere, gehe ich gerne mit meiner Freundin spazieren, fahre mit meinem <b>E-Roller</b> oder fahre mit dem Fahrrad durch die Natur.</p>
+                        <p>In meiner Freizeit, wenn ich não gerade neue Projekte (wie dieses Portfolio) programmiere, gehe ich gerne mit meiner Freundin spazieren, fahre mit meinem <b>E-Roller</b> oder fahre mit dem Fahrrad durch die Natur.</p>
                     </div>
 
                     <div class="card architecture-card">
                         <h3>⚙️ Hinter den Kulissen: Die Kontakt-API</h3>
                         <p>Ich verwende keine vorgefertigten Drittanbieter-Dienste für das Kontaktformular. Ich habe meine eigene <b>RESTful-API mit Python (Flask)</b> entwickelt. Sie läuft rund um die Uhr auf einem Linux-Server, der auf einem <b>Tablet</b> bei mir zu Hause konfiguriert ist! 🚀</p>
-                        <p>Die API empfängt die Daten, speichert sie in einer lokalen Datenbank (<b>SQLite</b>), verhindert Spam durch <i>Rate Limiting</i> und sendet mir dann automatisch eine E-Mail über SMTP. Sollte mein Heimserver außerdem vorübergehend die Verbindung verlieren, verfügt diese Website über eine intelligente <b>Offline-Warteschlange</b>, die Ihre Nachricht speichert und automatisch erneut sendet, sobald das System wieder online ist. Eine komplette, zu 100% von mir erstellte End-to-End-Architektur!</p>
+                        <p>The API recebe os dados, salva em um banco de dados local (<b>SQLite</b>), verifica se há spam usando <i>Rate Limiting</i>, e me dispara um e-mail automaticamente via SMTP. Além disso, se o meu servidor caseiro reiniciar ou perder a internet, este site possui uma <b>Fila Offline</b> inteligente que salva sua mensagem e envia de forma automática assim que o sistema voltar ao ar. Eine komplette, zu 100% von mir erstellte End-to-End-Architektur!</p>
                     </div>
                 </div>
             </div>
@@ -277,6 +311,23 @@ const translations = {
                             <span>SSH</span>
                         </div>
                         <a href="https://termux-blog-g.blogspot.com/2026/03/termux-ultra-edition-2026-o-setup.html" target="_blank" class="primary-btn" style="margin-top: 10px; display: inline-block;">Vollständigen Artikel lesen</a>
+                    </div>
+
+                    <div class="card blog-card">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMiMzFjq16-kV8FJGTdwEwgYkR8WkUU6aWPZUp4beP29LWQpfhAZL8QtMAEQFb7NKw43V7089bv2u23eScHNCL4wtNXYvEuTw7EQ_26lobVXX9v0R-rNb2X-TaZPWhaJJZYzYJkJNAPcmMp54WSoGnYiLOXPLMLDAWkJORMNwyxvXnKfiu9yWGG7bjllo/w320-h189-rw/Captura%20de%20tela%202026-05-20%20082602.png" alt="Nexus Downloader" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                        <h3>💚 Nexus Downloader: C# GUI für yt-dlp</h3>
+                        <p style="margin-bottom: 10px; color: var(--text-secondary); font-size: 13px;">📅 Mai 2026 · 🏷️ Automatisierung</p>
+                        <p>Videos herunterladen oder Audios extrahieren, ganz ohne komplizierte Befehle! Moderner Dark-Modus, automatischer yt-dlp Setup-Mechanismus und Live-Fortschrittsanzeige.</p>
+                        <div class="skills-tags" style="margin: 15px 0;">
+                            <span>C#</span>
+                            <span>Windows Forms</span>
+                            <span>yt-dlp</span>
+                            <span>Automatisierung</span>
+                        </div>
+                        <div style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;">
+                            <a href="https://termux-blog-g.blogspot.com/2026/05/nexus-downloader.html" target="_blank" class="primary-btn" style="flex: 1; text-align: center; font-size: 13px;">📖 Im Blog lesen</a>
+                            <a href="https://github.com/GabrielDaSilva17/Nuxus-Downloader" target="_blank" class="secondary-btn" style="flex: 1; text-align: center; font-size: 13px;">💻 Code ansehen</a>
+                        </div>
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 30px;">
