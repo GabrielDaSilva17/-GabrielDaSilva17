@@ -215,3 +215,101 @@ function loadPage(page, animate = true) {
         render();
     }
 }
+
+// ==========================================================================
+// SISTEMA DE COOKIES E POPUP DE IDIOMA
+// ==========================================================================
+
+// Função para salvar Cookies (Validade padrão: 1 dia)
+function setLanguageCookie(value, days = 1) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = "user_language=" + value + ";" + expires + ";path=/;SameSite=Lax";
+}
+
+// Função para buscar Cookie salvo
+function getLanguageCookie() {
+    const name = "user_language=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+// Execução e lógica de controle ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = getLanguageCookie();
+    const popup = document.getElementById("lang-popup");
+
+    if (savedLang) {
+        // Se já existe cookie, usa o idioma salvo e não exibe o popup
+        currentLang = savedLang;
+
+        // Sincroniza a classe ativa nos botões do header
+        document.querySelectorAll(".lang-btn").forEach(btn => {
+            if (btn.getAttribute("data-lang") === savedLang) {
+                btn.classList.add("active");
+            } else {
+                btn.classList.remove("active");
+            }
+        });
+
+        // Atualiza a tela com o idioma do cookie
+        updateUIStrings();
+        loadPage(currentPage);
+    } else {
+        // Se NÃO existe cookie, exibe o popup removendo a classe hidden
+        if (popup) {
+            popup.classList.remove("lang-popup-hidden");
+        }
+    }
+
+    // Configura a ação de clique nos botões do POPUP
+    document.querySelectorAll(".popup-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const selected = btn.getAttribute("data-lang-choice");
+
+            // Define o cookie para expirar em 1 dia
+            setLanguageCookie(selected, 1);
+
+            // Atualiza o estado global da aplicação
+            currentLang = selected;
+
+            // Sincroniza visualmente os botões do cabeçalho original
+            document.querySelectorAll(".lang-btn").forEach(headerBtn => {
+                if (headerBtn.getAttribute("data-lang") === selected) {
+                    headerBtn.classList.add("active");
+                } else {
+                    headerBtn.classList.remove("active");
+                }
+            });
+
+            // Atualiza a interface e a página ativa
+            updateUIStrings();
+            loadPage(currentPage, false);
+
+            // Esconde o popup com transição suave
+            if (popup) {
+                popup.classList.add("lang-popup-hidden");
+            }
+        });
+    });
+});
+
+// Adiciona compatibilidade para salvar cookies também se ele mudar o idioma no HEADER do site
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("lang-btn")) {
+        const selectedLang = event.target.getAttribute("data-lang");
+        // Salva a nova escolha no cookie por 1 dia
+        setLanguageCookie(selectedLang, 1);
+    }
+});

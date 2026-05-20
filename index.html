@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <header class="clean-header">
@@ -34,11 +36,22 @@
     </header>
 
     <main id="root" class="container"></main>
-
+    <!-- Popup de Idioma (Cole logo abaixo de <body>) -->
+    <div id="lang-popup" class="lang-popup-hidden">
+        <div class="popup-box">
+            <h2 class="popup-title">Selecione o idioma / Select language</h2>
+            <div class="popup-options">
+                <button class="popup-btn" data-lang-choice="pt">🇧🇷 Português</button>
+                <button class="popup-btn" data-lang-choice="en">🇺🇸 English</button>
+                <button class="popup-btn" data-lang-choice="de">🇩🇪 Deutsch</button>
+            </div>
+        </div>
+    </div>
     <footer>
         <p><span data-i18n="footer_text">&copy; 2026 Gabriel da Silva. Feito com</span> <span class="heart">❤</span></p>
     </footer>
 
     <script src="script.js" type="module"></script>
 </body>
+
 </html>
