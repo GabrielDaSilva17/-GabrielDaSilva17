@@ -10,7 +10,7 @@ const API_URL = "https://gabrielapi.serveousercontent.com/api/mensagem";
 
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById("menu-toggle");
-    
+
     // Força carregar a home e os textos iniciais
     updateUIStrings();
     loadPage("home");
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Event delegation for the nav link clicks
 navlist.addEventListener("click", (event) => {
     if (event.target.tagName === "A") {
-        event.preventDefault(); 
+        event.preventDefault();
         currentPage = event.target.getAttribute("data-page");
         loadPage(currentPage);
         navlist.classList.remove("active");
@@ -50,11 +50,11 @@ document.addEventListener("click", (event) => {
         const selectedLang = event.target.getAttribute("data-lang");
         if (selectedLang !== currentLang) {
             currentLang = selectedLang;
-            
+
             // Atualiza botões
             document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
             event.target.classList.add("active");
-            
+
             // Atualiza interface e página atual
             updateUIStrings();
             loadPage(currentPage, false);
@@ -69,7 +69,7 @@ document.addEventListener("submit", (event) => {
 
         const formData = new FormData(event.target);
         const data = Object.fromEntries(formData);
-        
+
         const submitBtn = event.target.querySelector('button[type="submit"]');
         const originalText = i18n_strings[currentLang].send_btn;
         submitBtn.innerHTML = "<span class='spinner'></span> " + i18n_strings[currentLang].sending;
@@ -81,41 +81,41 @@ document.addEventListener("submit", (event) => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
         })
-        .then(response => {
-            if (!response.ok) throw new Error("Server error");
-            return response.json();
-        })
-        .then(result => {
-            submitBtn.textContent = i18n_strings[currentLang].sent;
-            submitBtn.classList.remove("loading");
-            submitBtn.classList.add("success");
-            event.target.reset();
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.classList.remove("success");
-                submitBtn.disabled = false;
-            }, 3000);
-        })
-        .catch(error => {
-            console.warn("API Offline ou Erro, salvando na fila...", error);
-            
-            // Salva na fila do LocalStorage
-            saveToQueue(data);
+            .then(response => {
+                if (!response.ok) throw new Error("Server error");
+                return response.json();
+            })
+            .then(result => {
+                submitBtn.textContent = i18n_strings[currentLang].sent;
+                submitBtn.classList.remove("loading");
+                submitBtn.classList.add("success");
+                event.target.reset();
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.classList.remove("success");
+                    submitBtn.disabled = false;
+                }, 3000);
+            })
+            .catch(error => {
+                console.warn("API Offline ou Erro, salvando na fila...", error);
 
-            // Avisa o usuário que foi pra fila
-            submitBtn.textContent = i18n_strings[currentLang].offline_saved;
-            submitBtn.classList.remove("loading");
-            // Usamos uma cor diferente (amarelo/laranja) para "Aviso/Fila"
-            submitBtn.style.backgroundColor = "#f57c00"; 
-            
-            event.target.reset();
-            
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.style.backgroundColor = "";
-                submitBtn.disabled = false;
-            }, 4000);
-        });
+                // Salva na fila do LocalStorage
+                saveToQueue(data);
+
+                // Avisa o usuário que foi pra fila
+                submitBtn.textContent = i18n_strings[currentLang].offline_saved;
+                submitBtn.classList.remove("loading");
+                // Usamos uma cor diferente (amarelo/laranja) para "Aviso/Fila"
+                submitBtn.style.backgroundColor = "#f57c00";
+
+                event.target.reset();
+
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.backgroundColor = "";
+                    submitBtn.disabled = false;
+                }, 4000);
+            });
     }
 });
 
@@ -129,32 +129,32 @@ function saveToQueue(data) {
 
 function processQueue() {
     let queue = JSON.parse(localStorage.getItem("contactQueue") || "[]");
-    
+
     if (queue.length === 0) return;
 
     // Pega o item mais antigo da fila
     const data = queue[0];
-    
+
     fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
     })
-    .then(response => {
-        if (response.ok) {
-            // Se enviou com sucesso, remove da fila e atualiza o LocalStorage
-            queue.shift();
-            localStorage.setItem("contactQueue", JSON.stringify(queue));
-            console.log("Mensagem da fila enviada com sucesso!");
-            
-            // Se ainda tem itens, processa o próximo imediatamente
-            if (queue.length > 0) processQueue();
-        }
-    })
-    .catch(error => {
-        // Se falhou de novo, apenas ignoramos e tentamos na próxima execução do setInterval
-        console.log("Processador de fila: Servidor continua offline.");
-    });
+        .then(response => {
+            if (response.ok) {
+                // Se enviou com sucesso, remove da fila e atualiza o LocalStorage
+                queue.shift();
+                localStorage.setItem("contactQueue", JSON.stringify(queue));
+                console.log("Mensagem da fila enviada com sucesso!");
+
+                // Se ainda tem itens, processa o próximo imediatamente
+                if (queue.length > 0) processQueue();
+            }
+        })
+        .catch(error => {
+            // Se falhou de novo, apenas ignoramos e tentamos na próxima execução do setInterval
+            console.log("Processador de fila: Servidor continua offline.");
+        });
 }
 
 // --- FUNÇÕES DE RENDERIZAÇÃO E INTERFACE ---
