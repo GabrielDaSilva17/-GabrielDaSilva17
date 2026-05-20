@@ -53,6 +53,19 @@ const translations = {
                 </div>
             </div>
         `,
+        blog: `
+            <div class="about-section fade-in">
+                <h1 class="title-center">Blog & Artigos</h1>
+                <div class="about-grid">
+                    <div class="card">
+                        <h3>📝 Termux Ultra Edition 2026: O setup</h3>
+                        <p style="margin-bottom: 15px; color: var(--text-secondary); font-size: 14px;">Publicado no Blogger</p>
+                        <p>Neste artigo, mostro em detalhes como configurar o Termux para transformá-lo num servidor Linux completo de bolso, ideal para hospedar APIs e projetos locais de forma prática usando Python e Node.js.</p>
+                        <a href="https://termux-blog-g.blogspot.com/2026/03/termux-ultra-edition-2026-o-setup.html" target="_blank" class="primary-btn" style="margin-top: 15px; display: inline-block;">Ler Artigo Completo</a>
+                    </div>
+                </div>
+            </div>
+        `,
         contact: `
             <div class="contact-section fade-in">
                 <div class="card contact-card">
@@ -131,6 +144,19 @@ const translations = {
                 </div>
             </div>
         `,
+        blog: `
+            <div class="about-section fade-in">
+                <h1 class="title-center">Blog & Articles</h1>
+                <div class="about-grid">
+                    <div class="card">
+                        <h3>📝 Termux Ultra Edition 2026: The Setup</h3>
+                        <p style="margin-bottom: 15px; color: var(--text-secondary); font-size: 14px;">Published on Blogger</p>
+                        <p>In this article, I show in detail how to configure Termux to transform it into a complete pocket Linux server, ideal for hosting APIs and local projects using Python and Node.js.</p>
+                        <a href="https://termux-blog-g.blogspot.com/2026/03/termux-ultra-edition-2026-o-setup.html" target="_blank" class="primary-btn" style="margin-top: 15px; display: inline-block;">Read Full Article</a>
+                    </div>
+                </div>
+            </div>
+        `,
         contact: `
             <div class="contact-section fade-in">
                 <div class="card contact-card">
@@ -205,6 +231,19 @@ const translations = {
                         <h3>⚙️ Hinter den Kulissen: Die Kontakt-API</h3>
                         <p>Ich verwende keine vorgefertigten Drittanbieter-Dienste für das Kontaktformular. Ich habe meine eigene <b>RESTful-API mit Python (Flask)</b> entwickelt. Sie läuft rund um die Uhr auf einem Linux-Server, der auf einem <b>Tablet</b> bei mir zu Hause konfiguriert ist! 🚀</p>
                         <p>Die API empfängt die Daten, speichert sie in einer lokalen Datenbank (<b>SQLite</b>), verhindert Spam durch <i>Rate Limiting</i> und sendet mir dann automatisch eine E-Mail über SMTP. Sollte mein Heimserver außerdem vorübergehend die Verbindung verlieren, verfügt diese Website über eine intelligente <b>Offline-Warteschlange</b>, die Ihre Nachricht speichert und automatisch erneut sendet, sobald das System wieder online ist. Eine komplette, zu 100% von mir erstellte End-to-End-Architektur!</p>
+                    </div>
+                </div>
+            </div>
+        `,
+        blog: `
+            <div class="about-section fade-in">
+                <h1 class="title-center">Blog & Artikel</h1>
+                <div class="about-grid">
+                    <div class="card">
+                        <h3>📝 Termux Ultra Edition 2026: Das Setup</h3>
+                        <p style="margin-bottom: 15px; color: var(--text-secondary); font-size: 14px;">Veröffentlicht auf Blogger</p>
+                        <p>In diesem Artikel zeige ich ausführlich, wie man Termux so konfiguriert, dass es sich in einen kompletten Taschen-Linux-Server verwandelt, ideal für das Hosting von APIs und lokalen Projekten mit Python und Node.js.</p>
+                        <a href="https://termux-blog-g.blogspot.com/2026/03/termux-ultra-edition-2026-o-setup.html" target="_blank" class="primary-btn" style="margin-top: 15px; display: inline-block;">Vollständigen Artikel lesen</a>
                     </div>
                 </div>
             </div>
