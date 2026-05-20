@@ -288,6 +288,18 @@ nav ul {
     min-height: calc(100vh - var(--header-height) - 100px);
 }
 
+.blog-card {
+    max-width: 600px;
+}
+
+.blog-card img {
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover img {
+    transform: scale(1.02);
+}
+
 .contact-card,
 .architecture-card {
     width: 100%;

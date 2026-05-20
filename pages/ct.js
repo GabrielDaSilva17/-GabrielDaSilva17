@@ -56,13 +56,25 @@ const translations = {
         blog: `
             <div class="about-section fade-in">
                 <h1 class="title-center">Blog & Artigos</h1>
+                <p class="subtitle" style="text-align: center; margin-bottom: 30px;">Escrevo sobre Linux, servidores e automação no meu blog no Blogger.</p>
                 <div class="about-grid">
-                    <div class="card">
-                        <h3>📝 Termux Ultra Edition 2026: O setup</h3>
-                        <p style="margin-bottom: 15px; color: var(--text-secondary); font-size: 14px;">Publicado no Blogger</p>
-                        <p>Neste artigo, mostro em detalhes como configurar o Termux para transformá-lo num servidor Linux completo de bolso, ideal para hospedar APIs e projetos locais de forma prática usando Python e Node.js.</p>
-                        <a href="https://termux-blog-g.blogspot.com/2026/03/termux-ultra-edition-2026-o-setup.html" target="_blank" class="primary-btn" style="margin-top: 15px; display: inline-block;">Ler Artigo Completo</a>
+                    <div class="card blog-card">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEikmGf2DgiXIFtW8hHJ2rHcDEBnu6c6toUhv2xhigMfUNCH0MyA9QiVnwlvYXtY5ysQdpcpPBhyxXgo9ITRXGsSaLofiijNh-YYH9FcZdsQ9kz8qau2zj7RClq2FugQhgsRivY8B4jwqxHk6m6t9riHZoRctsPirm9HMty_OhC6wiRqJQ5SMyOdKm5VIC8=w800" alt="Termux Ultra Edition" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                        <h3>🚀 Termux ULTRA EDITION 2026: O Setup Definitivo para Android</h3>
+                        <p style="margin-bottom: 10px; color: var(--text-secondary); font-size: 13px;">📅 Março 2026 · 🏷️ Linux</p>
+                        <p>Transforme seu Termux em uma estação de trabalho de elite! Script de automação que instala Python, Node.js, PHP, servidor SSH, ambiente gráfico X11 e muito mais.</p>
+                        <div class="skills-tags" style="margin: 15px 0;">
+                            <span>Termux</span>
+                            <span>Linux</span>
+                            <span>Python</span>
+                            <span>Node.js</span>
+                            <span>SSH</span>
+                        </div>
+                        <a href="https://termux-blog-g.blogspot.com/2026/03/termux-ultra-edition-2026-o-setup.html" target="_blank" class="primary-btn" style="margin-top: 10px; display: inline-block;">Ler Artigo Completo</a>
                     </div>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="https://termux-blog-g.blogspot.com/search/label/Linux" target="_blank" class="secondary-btn">🌐 Ver Todos os Artigos no Blogger</a>
                 </div>
             </div>
         `,
@@ -147,13 +159,25 @@ const translations = {
         blog: `
             <div class="about-section fade-in">
                 <h1 class="title-center">Blog & Articles</h1>
+                <p class="subtitle" style="text-align: center; margin-bottom: 30px;">I write about Linux, servers and automation on my Blogger blog.</p>
                 <div class="about-grid">
-                    <div class="card">
-                        <h3>📝 Termux Ultra Edition 2026: The Setup</h3>
-                        <p style="margin-bottom: 15px; color: var(--text-secondary); font-size: 14px;">Published on Blogger</p>
-                        <p>In this article, I show in detail how to configure Termux to transform it into a complete pocket Linux server, ideal for hosting APIs and local projects using Python and Node.js.</p>
-                        <a href="https://termux-blog-g.blogspot.com/2026/03/termux-ultra-edition-2026-o-setup.html" target="_blank" class="primary-btn" style="margin-top: 15px; display: inline-block;">Read Full Article</a>
+                    <div class="card blog-card">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEikmGf2DgiXIFtW8hHJ2rHcDEBnu6c6toUhv2xhigMfUNCH0MyA9QiVnwlvYXtY5ysQdpcpPBhyxXgo9ITRXGsSaLofiijNh-YYH9FcZdsQ9kz8qau2zj7RClq2FugQhgsRivY8B4jwqxHk6m6t9riHZoRctsPirm9HMty_OhC6wiRqJQ5SMyOdKm5VIC8=w800" alt="Termux Ultra Edition" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                        <h3>🚀 Termux ULTRA EDITION 2026: The Ultimate Setup for Android</h3>
+                        <p style="margin-bottom: 10px; color: var(--text-secondary); font-size: 13px;">📅 March 2026 · 🏷️ Linux</p>
+                        <p>Transform your Termux into an elite workstation! An automation script that installs Python, Node.js, PHP, SSH server, X11 graphical environment and much more.</p>
+                        <div class="skills-tags" style="margin: 15px 0;">
+                            <span>Termux</span>
+                            <span>Linux</span>
+                            <span>Python</span>
+                            <span>Node.js</span>
+                            <span>SSH</span>
+                        </div>
+                        <a href="https://termux-blog-g.blogspot.com/2026/03/termux-ultra-edition-2026-o-setup.html" target="_blank" class="primary-btn" style="margin-top: 10px; display: inline-block;">Read Full Article</a>
                     </div>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="https://termux-blog-g.blogspot.com/search/label/Linux" target="_blank" class="secondary-btn">🌐 View All Articles on Blogger</a>
                 </div>
             </div>
         `,
@@ -238,13 +262,25 @@ const translations = {
         blog: `
             <div class="about-section fade-in">
                 <h1 class="title-center">Blog & Artikel</h1>
+                <p class="subtitle" style="text-align: center; margin-bottom: 30px;">Ich schreibe über Linux, Server und Automatisierung in meinem Blogger-Blog.</p>
                 <div class="about-grid">
-                    <div class="card">
-                        <h3>📝 Termux Ultra Edition 2026: Das Setup</h3>
-                        <p style="margin-bottom: 15px; color: var(--text-secondary); font-size: 14px;">Veröffentlicht auf Blogger</p>
-                        <p>In diesem Artikel zeige ich ausführlich, wie man Termux so konfiguriert, dass es sich in einen kompletten Taschen-Linux-Server verwandelt, ideal für das Hosting von APIs und lokalen Projekten mit Python und Node.js.</p>
-                        <a href="https://termux-blog-g.blogspot.com/2026/03/termux-ultra-edition-2026-o-setup.html" target="_blank" class="primary-btn" style="margin-top: 15px; display: inline-block;">Vollständigen Artikel lesen</a>
+                    <div class="card blog-card">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEikmGf2DgiXIFtW8hHJ2rHcDEBnu6c6toUhv2xhigMfUNCH0MyA9QiVnwlvYXtY5ysQdpcpPBhyxXgo9ITRXGsSaLofiijNh-YYH9FcZdsQ9kz8qau2zj7RClq2FugQhgsRivY8B4jwqxHk6m6t9riHZoRctsPirm9HMty_OhC6wiRqJQ5SMyOdKm5VIC8=w800" alt="Termux Ultra Edition" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                        <h3>🚀 Termux ULTRA EDITION 2026: Das ultimative Setup für Android</h3>
+                        <p style="margin-bottom: 10px; color: var(--text-secondary); font-size: 13px;">📅 März 2026 · 🏷️ Linux</p>
+                        <p>Verwandeln Sie Ihr Termux in eine Elite-Workstation! Ein Automatisierungsskript, das Python, Node.js, PHP, SSH-Server, X11-Grafikumgebung und vieles mehr installiert.</p>
+                        <div class="skills-tags" style="margin: 15px 0;">
+                            <span>Termux</span>
+                            <span>Linux</span>
+                            <span>Python</span>
+                            <span>Node.js</span>
+                            <span>SSH</span>
+                        </div>
+                        <a href="https://termux-blog-g.blogspot.com/2026/03/termux-ultra-edition-2026-o-setup.html" target="_blank" class="primary-btn" style="margin-top: 10px; display: inline-block;">Vollständigen Artikel lesen</a>
                     </div>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="https://termux-blog-g.blogspot.com/search/label/Linux" target="_blank" class="secondary-btn">🌐 Alle Artikel auf Blogger ansehen</a>
                 </div>
             </div>
         `,
