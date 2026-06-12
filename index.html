@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel da Silva | Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="clean-header">
+        <div class="logo"><a href="#home" data-page="home">G<span class="accent-text">.</span></a></div>
+
+        <nav>
+            <div class="borgemenu" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul id="nav-list">
+                <li><a href="#home" data-page="home" class="nav-link" data-i18n="nav_home">Home</a></li>
+                <li><a href="#about" data-page="about" class="nav-link" data-i18n="nav_about">Sobre</a></li>
+                <li><a href="#blog" data-page="blog" class="nav-link" data-i18n="nav_blog">Blog</a></li>
+                <li><a href="#contact" data-page="contact" class="nav-link" data-i18n="nav_contact">Contato</a></li>
+                <li><a href="#feedback" data-page="feedback" class="nav-link" data-i18n="nav_feedback">Feedback</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-btn active" data-lang="pt">PT</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="de">DE</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="root" class="container"></main>
+
+    <!-- Popup de Idioma -->
+    <div id="lang-popup" class="lang-popup-hidden">
+        <div class="popup-box">
+            <h2 class="popup-title">Selecione o idioma / Select language</h2>
+            <div class="popup-options">
+                <button class="popup-btn" data-lang-choice="pt">🇧🇷 Português</button>
+                <button class="popup-btn" data-lang-choice="en">🇺🇸 English</button>
+                <button class="popup-btn" data-lang-choice="de">🇩🇪 Deutsch</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><span data-i18n="footer_text">&copy; 2026 Gabriel da Silva. Feito com</span> <span class="heart">❤</span></p>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
